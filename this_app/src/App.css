@@ -1,0 +1,45 @@
+*{
+  margin: 0 auto;
+
+}
+.main{
+  min-width: 300px;
+  max-height: 50vh;
+ display: grid;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4,2fr);
+  .content{
+    padding: 30px;
+    width: auto;
+    height: auto;
+  }
+
+
+}
+@media screen and (max-width:360px){
+  .main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+}
+.anim-loader{
+  color: #000;
+  width: 5px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+  transform: translateX(-38px);
+  animation: l21 .5s infinite alternate linear;
+  margin-left:200% ;
+}
+
+@keyframes l21 {
+  50%  {box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px}
+  100% {box-shadow: 19px 0 0 0  , 38px 0 0 3px, 57px 0 0 7px}
+}
